@@ -1,0 +1,11 @@
+CREATE TABLE DRIVER_DETAILS
+(   DRIVER_LICENSE_NUMBER varchar2(50) not null,
+    DRIVER_NAME varchar2(50),
+    BEST_QUALITY varchar2(50),
+    PHONE numeric(10),
+    SHIFT varchar2(50),
+    ADDRESS varchar2(50),
+    RAITING varchar2(50),
+    CONSTRAINT DRIVER_PRIMARY_KEY  PRIMARY KEY (DRIVER_LICENSE_NUMBER)
+);
+

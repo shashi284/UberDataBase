@@ -1,0 +1,12 @@
+CREATE OR REPLACE TRIGGER Discount_Update_TK
+  BEFORE DELETE OR INSERT OR UPDATE ON UBER_REWARDS
+  FOR EACH ROW
+WHEN (new.REFRRAL_COUNT  > 3)
+DECLARE
+    DISCOUNT_UPDATE number;
+BEGIN
+    DISCOUNT_UPDATE  :=10.99;
+    dbms_output.put('Updated Discount for customer is: ' || :DISCOUNT_UPDATE);
+    
+END;
+/
